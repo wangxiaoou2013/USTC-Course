@@ -5,7 +5,7 @@ import base64
 
 
 def get_token():
-    #get the access token from API
+    # get the access token from API
     API_key = 'aCK8irrzhG9PA3XVR0MDgnvH'
     Secret_key = 'PVIf0ZBpwr2Em8BxbBQW2ECKD5YgYwpq'
     host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=' + API_key + '&client_secret=' + Secret_key
@@ -23,7 +23,7 @@ def get_token():
 
 
 def get_result_bankcard(file, key):
-    #recognition of bankcard
+    # recognition of bankcard
     request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/bankcard"
     f = open(file, 'rb')
     img = base64.b64encode(f.read())
