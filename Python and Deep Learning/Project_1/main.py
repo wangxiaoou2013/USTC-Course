@@ -1,5 +1,5 @@
 # main program
-import time
+
 import tkinter.messagebox
 
 import func_api
@@ -58,10 +58,11 @@ class UI:
                     global number
                     global name
                     global tpe
+
                     date = result_dict['valid_date']
                     number = result_dict['bank_card_number']
                     name = result_dict['bank_name']
-                    tpe = result_dict['bank_card_type']
+                    tpe = func_api.bankcard_type(result_dict['bank_card_type'])
                     self.bankcard_window.update()
 
                     text_date.insert("insert", date)

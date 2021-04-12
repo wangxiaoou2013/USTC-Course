@@ -37,3 +37,17 @@ def get_result_bankcard(file, key):
         return result
     else:
         return 0
+
+
+def bankcard_type(num):
+    if num == 0:
+        result = 'Cannot Recognize'
+    elif num == 1:
+        result = 'Debit Card'
+    elif num == 2:
+        result = 'Credit Card'
+    elif num == 3:
+        result = 'Semi-Credit Card'
+    elif num == 4:
+        result = 'Prepaid Card'
+    return result
