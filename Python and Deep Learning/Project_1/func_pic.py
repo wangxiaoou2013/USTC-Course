@@ -6,6 +6,7 @@ import os
 from PIL import Image
 
 def img_open():
+    # start GUI to open image and get the path of that
     root = tkinter.Tk()
     root.withdraw()
     default_dir = r"Filepath"
@@ -13,6 +14,7 @@ def img_open():
     return file_path
 
 def resize(w, h, w_box, h_box, img_pil):
+    # resize the image to fit the window
     f1 = 1.0 * w_box / w
     f2 = 1.0 * h_box / h
     f = min([f1, f2])

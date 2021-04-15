@@ -7,8 +7,9 @@ import func_pic
 import tkinter as tk
 from PIL import Image, ImageTk
 
-global file
-global img_visible
+global file  # image file
+global img_visible  # image opened
+# above is the feature of bankcard after analysis: valid date, number, name, and type
 global date
 global number
 global name
@@ -26,6 +27,7 @@ class UI:
                                      font=('Arial', 12),
                                      width=40,
                                      height=1, command=self.img_open_button).place(x=0, y=0)
+        # click the button and then open picture and analyze
 
     def img_open_button(self):
         global file
@@ -74,7 +76,6 @@ class UI:
                     text_number.place(x=600, y=90)
                     text_name.place(x=600, y=150)
                     text_type.place(x=600, y=210)
-
                 else:
                     tkinter.messagebox.showinfo(title='Error', message='Wrong Picture!')
             else:
